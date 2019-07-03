@@ -12,7 +12,7 @@ h4{
     margin-left: 20px;
 }
 #nav{
-    padding-top: 15px;
+    /* padding-top: 15px; */
     position: absolute;
     width: 100%;
     height: 15vh;
@@ -34,11 +34,13 @@ h4{
     padding-top: 35px;
 }
 #logo{
+    position: absolute;
+    top: 14%;
+    left: 50%;
     display: inline-block;
-    width: 40%;
-    height: 0vh;
+    transform: translate(-50%, -14%);
     align-items: center;
-    padding-top: 35px;
+    /* padding-top: 35px; */
 
 }
 #shopIcon{
@@ -81,7 +83,7 @@ height: 50vh;
 }
 #bodyDiv1{
     position: absolute;
-    top: 55%;
+    top: 92%;
     width: 100%;
     height: 50vh;
     display: flex;
@@ -115,7 +117,7 @@ height: 50vh;
 }
 #bodyDiv2{
     position: absolute;
-    top: 108%;
+    top: 145%;
     width: 100%;
     height: 50vh;
     display: flex;
@@ -210,6 +212,39 @@ height: 50vh;
     background-color:  #e36159;
     color: white;
 }
+#cartIcon1{
+    border: 1px solid black;
+    text-align: center;
+    font-size: 25px;
+    height: 30px;
+    width: 3%;
+    position: absolute;
+    top: 55%;
+    padding: 5px;
+}
+#cartIcon1:hover{
+    transition:ease-in-out 0.2s;
+    background-color: black;
+    color: white;
+}
+#heartIcon1{
+    border: 1px solid  #e36159;
+    color:  #e36159;
+    text-align: center;
+    font-size: 25px;
+    height: 30px;
+    width: 3%;
+    position: absolute;
+    margin-left: 17%;
+    top: 55%;    
+    padding: 0.5%;
+}
+#heartIcon1:hover{
+    transition: ease-in-out 0.2s;
+    background-color:  #e36159;
+    color: white;
+}
+
 #detail{
     text-align: center;
     padding: 5%;
@@ -224,7 +259,7 @@ height: 50vh;
 #bodyDiv3{
     /* background-color: #e36159; */
     position: absolute;
-    top: 158%;
+    top: 190%;
     width: 100%;
     height: 50vh;
     display: flex;
@@ -236,6 +271,13 @@ height: 50vh;
     margin: 10px;
     /* background-color: black; */
 }
+
+/* .images{
+    height: 45vh;
+    width: 20%;
+    margin: 10px;
+    /* background-color: black; */
+
 .img{
     color: aliceblue;
     background-size: cover;
@@ -244,7 +286,7 @@ height: 50vh;
     /* margin-left: 27px; */
     height: 250px;
     background-position: center;
-
+    transition: 0.8s;
 }
 .cartIcon1{
     border: 1px solid black;
@@ -292,10 +334,14 @@ height: 50vh;
 }
 #bodyDiv4{
     position: absolute;
-    top: 210%;
+    top: 232%;
     width: 100%;
     height: 50vh;
     display: flex;
+}
+.img:hover{
+    transition: 0.8s;
+    background-size:120% 300px;
 }
 #img1{
     background-image: url("images/pic6.jpg");
@@ -338,7 +384,7 @@ h1 i{
     display: flex;
     position : absolute;
     background-color: black;
-    top: 270%;
+    top: 277%;
     width: 100%;
     height: 50vh;
 }
@@ -368,3 +414,218 @@ h1 i{
    overflow:scroll;
   
 } */
+ul{
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+li{
+    padding: 5px;
+}
+#hideIcon{
+    display: none;
+}
+/* #bodyDiv6{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    white-space: nowrap;
+} */
+.hidenav{
+    transition: all 0.5s;
+    width: 200px;
+    background-color: black;
+    color: white;
+    list-style: none;
+    position: absolute;
+    left: -50%;
+    top: 80%;
+    display: none;
+}
+.Arrival1{
+    transform: translate(1% , 9%);
+    display: inline-block;
+    height: 45vh;
+    width: 20%;
+    margin-left: 7%;
+    transition: all 0.7s;
+    
+}
+.Arrival1 .img{
+    height: 250px;
+}
+#bodyDiv6{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 1024px){
+    #navDiv{
+        display: none;
+    }
+    #shopIcon{
+        display: none;
+    }
+    #hideIcon{
+        position: absolute;
+        display: inline-block;
+        font-size: 22px;
+        transform: translate(-5%,-50%);
+        top: 50%;
+        left: 5%;
+        padding: 5px;
+    }
+    #hideIcon:hover{
+        color: white;
+    }   
+    .fa-gem{
+        font-size: 10px;
+    } 
+    /* #logo h1{
+        font-size: 
+    } */
+    #logo{
+        position: absolute;
+        top: 100%;
+        color: white;
+        height: 0vh;
+        transform: translate(-50%, -100%);
+        left: 50%;
+        font-size: 6px;
+        opacity: 0.8;
+    }
+    .opennav{
+        transition: all 0.5s;
+        background-color: black;
+        color: white;
+        list-style: none;
+        position: absolute;
+        z-index: 2;
+        top: 80%;
+        left: 0%;
+        display: inline-block;
+    
+    }
+    #slider{
+        height: 175px;
+    }
+    #slider img{
+        height: 175px !important;
+    }
+    #nav {
+        height: 40px;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        background-color: transparent;
+        text-align: center;
+    }
+    #bodyDiv2{
+        display: none;
+    }#bodyDiv3{
+        display: none;
+    }#bodyDiv4{
+        display: none;
+    }#bodyDiv5{
+        display: none;
+    }
+    #bodyDiv1{
+        position: absolute;
+    top: 73%;
+    width: 100%;
+    /* height: 50vh; */
+    display: inline-block;
+    }
+    #Underdiv1 {
+        display: inline-block;
+        padding: 10px;
+        /* height: 50vh; */
+        width: 84%;
+        padding-left: 10%;
+    }
+    #div1 {
+        height: 385px;
+    width: 100%;
+    }
+    #div2{
+        height: 385px;
+        width: 100%;
+    
+    }
+    #Underdiv2{
+        display: none;
+    }
+    .Arrival1{
+        transform: translate(1% , 9%);
+        display: inline-block;
+        width: 64%;
+        height: 307px;
+        margin-left: 16%;
+        transition: all 0.7s;
+    }
+    .Arrival1 .img{
+        height: 250px;
+    }
+    .cartIcon1{
+        border: 1px solid black;
+        text-align: center;
+        font-size: 20px;
+        height: 20px;
+        width: 2%;
+        padding: 5px;
+        margin-left: 15px;
+    }
+ 
+    #bodyDiv6{
+        position: absolute;
+        top: 28%;
+        width: 100%;
+        overflow-y: hidden;
+        display: block;
+        white-space: nowrap;
+    }
+    .hideLogo{
+        display: none !important;
+    }
+    #cartIcon{
+        border: 1px solid black;
+        text-align: center;
+        font-size: 25px;
+        height: 30px;
+        width: 10%;
+        position: absolute;
+        top: 78%;
+        padding: 5px;    }
+    #cartIcon:hover{
+        transition:ease-in-out 0.2s;
+        background-color: black;
+        color: white;
+    }
+    #heartIcon{
+        border: 1px solid #e36159;
+        color: #e36159;
+        text-align: center;
+        font-size: 25px;
+        height: 36px;
+        left: 54%;
+        width: 10%;
+        position: absolute;
+        /* margin-left: 17%; */
+        top: 78%;
+        padding: 0.5%;
+    }
+    #heartIcon:hover{
+        transition: ease-in-out 0.2s;
+        background-color:  #e36159;
+        color: white;
+    }
+    
+}

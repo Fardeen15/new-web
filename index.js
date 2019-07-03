@@ -16,24 +16,30 @@ function debounce(func, wait = 20, immediate = true) {
 var underDiv = document.getElementById('Underdiv2');
 var underDiv1 = document.getElementById('Underdiv3');
 function scrollColor() {
+    // console.log(window.scrollY)
     if (window.scrollY > 20) {
         nav.style.backgroundColor = "black";
         nav.style.color = "white";
-        document.getElementById('hide').style.color = "black";
+        if (!document.getElementById('logo').className) {
+            console.log(document.getElementById('logo').className)
+            document.getElementById('logo').classList += " hideLogo"
+        }
         nav.style.transition = 0.8 + "s";
-    } 
+        nav.style.position = "fixed";
+    }
     if (window.scrollY < 20) {
         nav.style.backgroundColor = "transparent";
         nav.style.color = "black";
+        document.getElementById('logo').classList.remove('hideLogo');
     }
     if (window.scrollY <= 0) {
         underDiv.style.backgroundPosition = `${50}% ${window.scrollY}px`
         underDiv1.style.backgroundPosition = `${50}% ${window.scrollY}px`
-    } 
-    if (window.scrollY < 300) {
+    }
+    if (window.scrollY < 250) {
         underDiv.style.backgroundPosition = `${50}% ${window.scrollY - 50}px`
     }
-    if (window.scrollY >= 800) {
+    if (window.scrollY <= 900) {
         underDiv1.style.backgroundPosition = `${50}% ${window.scrollY - 800}px`
     }
 }
@@ -50,7 +56,7 @@ var a = 0;
 function slider() {
     getImgId.src = images[i];
     document.getElementById('slider').style.animation = "slideMe 0.7s ease-in-out"
-    
+
     if (i < images.length - 1) {
         i++
     }
@@ -85,9 +91,27 @@ window.setInterval(divSlider(), 3000);
 // window.onload = divSlider;
 window.onload = slider;
 
-function myfunction(){
+function myfunction() {
     document.getElementById('hide').style.display = "inline-block";
 }
-function hide(){
+function hide() {
     document.getElementById('hide').style.display = "none";
 }
+function navopen() {
+    document.getElementById('hidenav').classList.toggle('opennav')
+}
+
+
+
+var b = 0;
+setInterval(() => {
+    if (b < -1100) {
+        b = 0
+    } else {
+        b = b - 130;
+    }
+    var div = document.getElementsByClassName('Arrival1');
+    for (var i = 0; i < div.length; i++) {
+        div[i].style.transform = `translate(${b}% , 9%)`
+    }
+}, 2000)
