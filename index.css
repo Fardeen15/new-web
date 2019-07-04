@@ -94,6 +94,10 @@ height: 50vh;
     height: 50vh;
     width: 50%;
 }
+.detail1 h2 {
+    padding: 6%;
+    font-size: larger;
+}
 #Underdiv2{
     scroll-behavior: smooth;
     background-size:cover;
@@ -259,7 +263,7 @@ height: 50vh;
 #bodyDiv3{
     /* background-color: #e36159; */
     position: absolute;
-    top: 190%;
+    top: 195%;
     width: 100%;
     height: 50vh;
     display: flex;
@@ -269,14 +273,7 @@ height: 50vh;
     height: 45vh;
     width: 20%;
     margin: 10px;
-    /* background-color: black; */
 }
-
-/* .images{
-    height: 45vh;
-    width: 20%;
-    margin: 10px;
-    /* background-color: black; */
 
 .img{
     color: aliceblue;
@@ -409,11 +406,6 @@ h1 i{
     display: none;
     animation: 0.7s ease-in-out;
 }
-/* #hidden:hover {
-   height: 20vh;
-   overflow:scroll;
-  
-} */
 ul{
     display: inline-block;
     text-decoration: none;
@@ -425,14 +417,6 @@ li{
 #hideIcon{
     display: none;
 }
-/* #bodyDiv6{
-    position: absolute;
-    top: 60%;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    white-space: nowrap;
-} */
 .hidenav{
     transition: all 0.5s;
     width: 200px;
@@ -440,16 +424,16 @@ li{
     color: white;
     list-style: none;
     position: absolute;
-    left: -50%;
-    top: 80%;
-    display: none;
+    left: -113%;
+    height: 100vh;
+    transform: translate(-113%, 0px);
 }
 .Arrival1{
     transform: translate(1% , 9%);
     display: inline-block;
     height: 45vh;
     width: 20%;
-    margin-left: 7%;
+    margin-left: 2%;
     transition: all 0.7s;
     
 }
@@ -465,8 +449,16 @@ li{
     display: block;
     white-space: nowrap;
 }
-
-
+#shopping-cart{
+    display: none;
+}
+hr{
+    top: 53%;
+    left: 5%;
+    background-image: linear-gradient(to right, transparent, black, transparent);
+    position: absolute;
+    height: 1px;
+    width: 87%;}
 @media only screen and (max-width: 1024px){
     #navDiv{
         display: none;
@@ -489,9 +481,6 @@ li{
     .fa-gem{
         font-size: 10px;
     } 
-    /* #logo h1{
-        font-size: 
-    } */
     #logo{
         position: absolute;
         top: 100%;
@@ -504,16 +493,18 @@ li{
     }
     .opennav{
         transition: all 0.5s;
-        background-color: black;
+        background-color: #1b1b1b;
         color: white;
         list-style: none;
         position: absolute;
         z-index: 2;
-        top: 80%;
+        text-align: left;
+        width: 72%;
+        /* top: 80%; */
         left: 0%;
+        transform: translate(0px, 0px);
         display: inline-block;
-    
-    }
+        height: 100vh;    }
     #slider{
         height: 175px;
     }
@@ -530,14 +521,43 @@ li{
     }
     #bodyDiv2{
         display: none;
-    }#bodyDiv3{
-        display: none;
-    }#bodyDiv4{
-        display: none;
-    }#bodyDiv5{
+    }
+    #bodyDiv3{
+        position: absolute;
+        top: 190%;
+        width: 100%;
+        /* height: 50vh; */
+        display: block;
+    }
+    .Arrival .img{
+        height: 332px;
+
+    }
+    #bodyDiv3 .Arrival{
+        transform: translate(1% , 9%);
+    display: inline-block;
+    width: 83%;
+    height: 405px;
+    margin-left: 7%;
+    transition: all 0.7s;
+    }
+        
+    #bodyDiv4{
         display: none;
     }
-    #bodyDiv1{
+    #bodyDiv5{
+        display: block;
+        position: absolute;
+        background-color: black;
+        top: 560%;
+        width: 100%;
+        height: 100vh
+    }
+    #bodyDiv5 div{
+        margin: 15px;
+        padding-left: 15px;
+    }
+        #bodyDiv1{
         position: absolute;
     top: 73%;
     width: 100%;
@@ -547,7 +567,6 @@ li{
     #Underdiv1 {
         display: inline-block;
         padding: 10px;
-        /* height: 50vh; */
         width: 84%;
         padding-left: 10%;
     }
@@ -560,15 +579,20 @@ li{
         width: 100%;
     
     }
+    #div1 #detail{
+        display: none;
+    }
+    #div2 #detail{
+        display: none;
+    }
     #Underdiv2{
         display: none;
     }
     .Arrival1{
         transform: translate(1% , 9%);
         display: inline-block;
-        width: 64%;
+        width: 100%;
         height: 307px;
-        margin-left: 16%;
         transition: all 0.7s;
     }
     .Arrival1 .img{
@@ -585,9 +609,10 @@ li{
     }
  
     #bodyDiv6{
-        position: absolute;
-        top: 28%;
-        width: 100%;
+        position: relative;
+        top: 13%;
+        left: 9%;
+        width: 80%;
         overflow-y: hidden;
         display: block;
         white-space: nowrap;
@@ -600,10 +625,12 @@ li{
         text-align: center;
         font-size: 25px;
         height: 30px;
-        width: 10%;
-        position: absolute;
-        top: 78%;
-        padding: 5px;    }
+        width: 12%;
+        position: relative;
+        top: 90%;
+        padding: 5px;
+        transform: translate(0%,-90%);
+        }
     #cartIcon:hover{
         transition:ease-in-out 0.2s;
         background-color: black;
@@ -615,17 +642,176 @@ li{
         text-align: center;
         font-size: 25px;
         height: 36px;
-        left: 54%;
-        width: 10%;
-        position: absolute;
-        /* margin-left: 17%; */
-        top: 78%;
+        left: 43%;
+        transform: translate(-43%,-90%);
+        width: 14%;
+        position: relative;
+        top: 90%;
         padding: 0.5%;
+    
     }
     #heartIcon:hover{
         transition: ease-in-out 0.2s;
         background-color:  #e36159;
         color: white;
     }
-    
+    #cartIcon1 {
+        border: 1px solid black;
+        text-align: center;
+        font-size: 25px;
+        height: 30px;
+        width: 12%;
+        position: relative;
+        top: 90%;
+        padding: 5px;
+        transform: translate(0%,-90%);
+    }
+    #cartIcon1:hover{
+        transition:ease-in-out 0.2s;
+        background-color: black;
+        color: white;
+    }
+    #heartIcon1{
+        border: 1px solid #e36159;
+    color: #e36159;
+    text-align: center;
+    font-size: 25px;
+    height: 36px;
+    left: 43%;
+    transform: translate(-43%,-90%);
+    width: 14%;
+    position: relative;
+    top: 90%;
+    padding: 0.5%;
+    }
+    #heartIcon1:hover{
+        transition: ease-in-out 0.2s;
+        background-color:  #e36159;
+        color: white;
+    }
+    .cartIcon1 {
+        border: 1px solid black;
+        text-align: center;
+        font-size: 25px;
+        height: 30px;
+        width: 12%;
+        position: relative;
+        top: 80%;
+        padding: 5px;
+        transform: translate(0%,-150%);
+    }
+    .cartIcon1:hover{
+        transition:ease-in-out 0.2s;
+        background-color: black;
+        color: white;
+    }
+    .heartIcon1{
+        border: 1px solid #e36159;
+    color: #e36159;
+    text-align: center;
+    font-size: 25px;
+    height: 36px;
+    left: 43%;
+    transform: translate(-43%,-150%);
+    width: 14%;
+    position: relative;
+    top: 80%;
+    padding: 0.5%;
+    }
+    .heartIcon1:hover{
+        transition: ease-in-out 0.2s;
+        background-color:  #e36159;
+        color: white;
+    }
+    #closeIcon{
+        position: relative;
+        color: #1b1b1b;
+    font-size: 35px;
+    padding: 5%;
+    left: 95%;
+    width: 250px;
+    top: 1%;
+    display: inline;
+    }
+    #shopping-cart{
+        position: absolute;
+        display: inline-block;
+        font-size: 22px;
+        transform: translate(-90%,-50%);
+        top: 50%;
+        left: 90%;
+        padding: 5px;
+    }
+    #white{
+        font-size: 14px;
+    }
+    #grey{
+        font-size: 10px;
+        padding: 4px
+    }
+    .detail1 {
+        position: relative;
+        text-align: center;
+        padding: 5%;
+        top: -11%;
+    }
+    .detail1 p {
+        font-size: 20px;
+        padding: 1%;
+    }
+    hr{
+        top: 29%;
+        left: 5%;
+        background-image: linear-gradient(to right, transparent, black, transparent);
+        position: absolute;
+        height: 1px;
+        width: 87%;
+    }
+    #frstUL li{
+        padding: 10px;
+        width: 90%;
+        font-size: 14px;
+    }
+    #frstUL{
+        width: 100%;
+        position: relative;
+        top: 9%; 
+    }
+    #hidenav li:hover{
+        background-color: grey;
+    }
+    #hidenav #scendUl{
+        font-size: 10px !important;
+        position: relative;
+        top: 42%;
+        transform: translate(0%,18%);
+        left: 0%;    }
+    #scendUl li{
+        padding: 10px;
+        width: 90%;
+        /* font-size: 14px; */
+    }
+    #hidenav h1{
+        font-size: 13px;
+        text-align: center;
+        padding: 30px;
+    }
+    #sharelink{
+        position: relative;
+        top: 11%;
+        transform: translate(0px, -11%);
+        text-align: center;
+    }
+    #sharelink span{
+        padding: 4%;
+    }
+    #facebook{
+        background: #45a;
+    }
+    #instagram{
+        background: #633a15;
+    }
+    #whatsapp{
+        background: #065;
+    }
 }

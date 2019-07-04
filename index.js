@@ -100,18 +100,26 @@ function hide() {
 function navopen() {
     document.getElementById('hidenav').classList.toggle('opennav')
 }
+function closeDiv(){
+    document.getElementById('hidenav').classList.remove('opennav');
+}
 
 
 
-var b = 0;
+var b = 100;
 setInterval(() => {
     if (b < -1100) {
         b = 0
     } else {
-        b = b - 130;
+        b = b - 104;
+        console.log(b)
     }
     var div = document.getElementsByClassName('Arrival1');
     for (var i = 0; i < div.length; i++) {
-        div[i].style.transform = `translate(${b}% , 9%)`
+        if(div[i] === 12 ){
+            div[i] = 0;
+        }else{
+            div[i].style.transform = `translate(${b}% , 9%)`
+        }
     }
-}, 2000)
+}, 4000)
